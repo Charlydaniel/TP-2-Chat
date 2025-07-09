@@ -9,7 +9,7 @@ import { BrowserRouter } from 'react-router'
 createRoot(document.getElementById('root')).render(
 
 
-<BrowserRouter>
+<BrowserRouter basename="/TP-2-Chat">
         <ContactContextProvider>
                 <MessageContextProvider>
                         <ContactDataContextProvider>
