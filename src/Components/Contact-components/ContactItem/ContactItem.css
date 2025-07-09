@@ -1,0 +1,139 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.tarjeta-contacto{
+    display: flex;
+    flex-direction: row;
+    border-bottom: 1px solid #333333;
+    font-size: 20px;
+    border-radius: 50px;
+    background-color: #2A2A2A;
+    box-shadow: 3px 1px 10px #e2e1e1;
+}
+.tarjeta-contacto-izquierda{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex:1;
+    align-items: center;
+}
+.tarjeta-contacto-derecha{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    flex:1;
+    align-items: center;
+    justify-content: end;
+}
+
+.tarjeta-contacto-contenedor-imagen{
+    display: flex;
+    flex-direction: row;
+    width: 50px;
+    height: 50px;
+    overflow: hidden;
+    border-radius: 100%;
+    margin: 10px;
+}
+.tarjeta-contacto-imagen{
+
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+.tarjeta-contacto-contenedor-detalles{
+    display: flex;
+    flex-direction: row;
+    align-items: end;
+    gap: 50px;
+}
+.tarjeta-contacto-nombre{
+    font-family: monospace;
+    font-size: 35px;
+    width: 100%;
+    text-align: start;
+    align-items: start;
+    color: #FFFFFF;
+}
+.botonIrAMensajes-contenedor{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+.botonIrAMensajes{
+    height: 100%;
+    color: #25D366;
+    border: none;
+    outline: none;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    font-size: 34px;
+}
+.tarjeta-contacto-conexion-contenedor{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    font-size: 20px;
+    color: #CCCCCC;
+}
+
+@media (max-width: 500px) {
+
+    .tarjeta-contacto{
+        border-radius: 0;
+        padding: 10px;
+    }
+.tarjeta-contacto-nombre{
+    font-size: 20px;
+    text-align: center;
+}
+.tarjeta-contacto-izquierda{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 30%;
+}
+.tarjeta-contacto-contenedor-detalles{
+    display: flex;
+    flex-direction: column;
+}
+.tarjeta-contacto-conexion-contenedor{
+    order: 2;
+    justify-content: center;
+}
+.botonIrAMensajes-contenedor{
+    order: 1;
+}
+.botonIrAMensajes{
+    width: 50px;
+    height: 50px;
+}
+.botonIrAMensajes-contenedor{
+    width: 100%;
+}
+}
+@media (max-width: 720px) {
+
+.tarjeta-contacto-conexion-contenedor{
+    font-size: 12px;
+}
+.tarjeta-contacto-contenedor-detalles{
+        gap: 0;
+}
+
+}
+@media (max-width: 279px) {
+
+    span{
+        text-align: center;
+    }
+
+}
+

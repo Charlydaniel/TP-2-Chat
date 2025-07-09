@@ -1,0 +1,87 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+
+.tarjeta-contacto-contenedor{
+  display: flex;
+  flex-direction: column;
+  background-color: black;
+}
+
+.opcion-contacto{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 50px;
+  height: 50px;
+  font-size: 30px;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  background-color: black;
+  border: none;
+}
+
+.opciones-contacto-contenedor{
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  gap: 20px;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: rgba(255, 255, 255, 0.438);
+  border-radius: 10px;
+}
+
+.header-contacto-contenedor {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(180, 165, 165);
+  color: rgb(17, 17, 17);
+  border-radius: 25px;
+  padding: 40px 0 20px 0;
+  margin-top: 40px;
+  width: 100%;
+}
+
+.img-contacto-contenedor {
+  position: absolute;
+  top: 10px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border: 3px white solid;
+  overflow: hidden;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tarjeta-contacto-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.datos-contacto {
+  text-align: center;
+}
+
+@media (max-width: 500px) {
+
+  .opcion-contacto{
+      width: 35px;
+      height: 35px;
+    }
+    .opciones-contacto-contenedor{
+
+      justify-content: center;
+
+  }
+}

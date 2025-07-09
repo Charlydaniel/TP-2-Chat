@@ -1,0 +1,71 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+:root{
+    --ancho:50%;
+    --margen-lados:10px;
+    --margen-sup-inf:55px;
+    --fuente:sans-serif;
+    --backgroundColor:#075E54;
+    --headerHeight:70px;
+}
+
+.chat-container{
+    display: flex;
+    flex-direction: row;
+    color: black;
+    border-radius: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
+    justify-content: flex-start;
+    top: 20px;
+    width: 100%;
+    margin: 10px 0;
+}
+.chat-burbuja{
+    display: inline-block;
+    max-width: 90%;
+    background-color:white;
+    border-radius: 15px;
+    padding: 8px 12px;
+    word-wrap: break-word;
+    flex: 0 1 auto;
+    box-shadow: 4px 4px 3px 3px rgba(0, 0, 0, 0.2);
+}
+
+.chat-container.--propio{
+    justify-content: flex-end;
+    flex-shrink: 0;    
+    flex-grow: 0;       
+}
+
+.hora-chat{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    font-style: normal;
+    font-weight: lighter;
+}
+.span-chat{
+    padding: 10px;
+}
+
+.contenedor-eleiminar-chat{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+}
+.boton-eliminar-chat{
+    background-color: rgba(255, 255, 255, 0.164);
+    border: 0;
+    color:var(--backgroundColor);
+    padding: 3px;
+    border-radius: 50px;
+}
+
+.--propio .chat-burbuja{
+    background-color: #33ff66;
+}
