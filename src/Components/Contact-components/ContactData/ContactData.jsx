@@ -3,10 +3,11 @@ import './ContactDataStyle.css'
 import { ContactDataContext } from "../../../Contexts/ContactDataContext";
 import { MdOutlineCall } from "react-icons/md";
 import { MdOutlineVideocam,MdOutlineEnhancedEncryption,MdOutlineSecurity } from "react-icons/md";
-import { IoMdSearch,IoMdNotificationsOutline,IoMdReturnLeft } from "react-icons/io";
+import { IoMdSearch,IoMdNotificationsOutline} from "react-icons/io";
 import { GrNotes } from "react-icons/gr";
 import { IoTimerOutline } from "react-icons/io5";
 import { LuMessageSquareLock } from "react-icons/lu";
+import { SlClose } from "react-icons/sl";
 import { useNavigate, useLocation} from 'react-router'
 import { useParams } from "react-router";
 
@@ -87,7 +88,7 @@ export default function ContactData(){
     <div className="tarjeta-contacto-contenedor">
       <header  className="header-contacto-contenedor">
         <div className="contonedor-boton-volver">
-          <button className="tarjeta-contacto-boton-volver" onClick={VolverA}><IoMdReturnLeft /></button>
+          <button className="tarjeta-contacto-boton-volver" onClick={VolverA}><SlClose /></button>
         </div>
         <div className="img-contacto-contenedor">
           <img className="tarjeta-contacto-img" src={'/imgs/' + contact.nombre + '.jpg'} alt="Foto contacto" />
