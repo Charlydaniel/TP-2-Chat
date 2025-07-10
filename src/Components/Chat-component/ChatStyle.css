@@ -28,6 +28,7 @@
     background-color: var(--backgroundColor);
     font-family: var(--fuente);
     padding: 80px 0;
+    min-height: 100vh;
 }
 
 .boton-chat-enviar{
@@ -118,6 +119,7 @@
     font-weight: 100;
     font-style: normal;
     padding-top: 10px;
+
 }  
 .boton-detalles-contacto{
  background: none;
