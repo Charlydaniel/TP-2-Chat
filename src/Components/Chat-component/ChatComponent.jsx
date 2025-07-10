@@ -67,9 +67,9 @@ navigate(`/contacts/${contactId}/data`)
                     <button onClick={handleIrATarjetaContacto}>+</button>
                 </div>
                 <div className="head-iconos nombre-contacto">
-                    <BiVideo />
-                    <PiPhoneCallThin />
-                    <SlOptionsVertical />
+                        <div className="contenedor-icono-video">< BiVideo /></div>
+                        <div className="contenedor-icono-llamado"><PiPhoneCallThin /></div>
+                        <div className="contenedor-icono-opciones"><SlOptionsVertical /></div>
                 </div>
             </aside>
         </header>

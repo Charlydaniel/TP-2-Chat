@@ -11,7 +11,7 @@ const ContactContextProvider = ({ children }) => {
 
     const [contacts, setContacts] = useState([])
     const [isLoadingContacts, SetLoadingContact] = useState(true)
-
+        
     setTimeout(() => {
         SetLoadingContact(true)
         const contactList = getContactList()

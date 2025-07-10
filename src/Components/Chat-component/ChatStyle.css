@@ -13,6 +13,15 @@
     --headerHeight:70px;
 }
 
+
+.contenedor-icono-video .contenedor-icono-llamado{
+    display: flex;
+    font-size: 50px;
+}
+.contenedor-icono-opciones{
+    display: flex;
+    font-size: 20px;
+}
 .conversation-contenedor{
     display: flex;
     flex-direction: column;
@@ -98,7 +107,7 @@
 .head-iconos{
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 30px;
     width: 40%;
     align-items: center;
     justify-content: flex-end;
