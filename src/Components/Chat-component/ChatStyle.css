@@ -119,6 +119,8 @@
     display: flex;
     flex-direction: row;
     align-items: center;
+    padding-left: 10px;
+    font-size: 20px;
 }
 .nombre-contacto{
     font-family: sans-serif;
