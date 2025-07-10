@@ -2,10 +2,11 @@ import { createContext } from "react"
 import { useState } from "react"
 import getContactList from "../Services/ContactService"
 
-export const ContactContext=createContext({contacts:[], rutaimagen:'',isLoadingContacts:true})
+export const ContactContext=createContext({ruta_actual:'',contacts:[], rutaimagen:'',isLoadingContacts:true})
 
 
 const rutaimagen='/imgs/'
+const ruta_actual='/'
 
 const ContactContextProvider = ({ children }) => {
 
@@ -25,7 +26,8 @@ const ContactContextProvider = ({ children }) => {
                 {
                     contacts: contacts,
                     rutaimagen: rutaimagen,
-                    isLoadingContacts: isLoadingContacts
+                    isLoadingContacts: isLoadingContacts,
+                    ruta_actual:ruta_actual
                 }
             }
         >

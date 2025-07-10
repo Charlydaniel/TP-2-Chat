@@ -119,6 +119,11 @@
     font-style: normal;
     padding-top: 10px;
 }  
+.boton-detalles-contacto{
+ background: none;
+ border: none;
+}
+
 @media (max-width: 400px) {
     .contenedor-imagen-contacto{
         display: none;

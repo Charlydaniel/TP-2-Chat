@@ -7,7 +7,7 @@ import { IoMdSearch,IoMdNotificationsOutline,IoMdReturnLeft } from "react-icons/
 import { GrNotes } from "react-icons/gr";
 import { IoTimerOutline } from "react-icons/io5";
 import { LuMessageSquareLock } from "react-icons/lu";
-import { useNavigate } from 'react-router'
+import { useNavigate, useLocation} from 'react-router'
 import { useParams } from "react-router";
 
 
@@ -15,9 +15,12 @@ export default function ContactData(){
 
   const navigate = useNavigate()
   const {contact_id}=useParams()
+  const location = useLocation();
+  const rutaAnterior = location.state?.ruta_anterior;
   
-  const VolverAChat = () => {
-    navigate(`/contacts/${contact_id}/messages`)
+
+  const VolverA = () => {
+    navigate(rutaAnterior)
   }
 
   const {contact} = useContext(ContactDataContext)
@@ -84,7 +87,7 @@ export default function ContactData(){
     <div className="tarjeta-contacto-contenedor">
       <header  className="header-contacto-contenedor">
         <div className="contonedor-boton-volver">
-          <button className="tarjeta-contacto-boton-volver" onClick={VolverAChat}><IoMdReturnLeft /></button>
+          <button className="tarjeta-contacto-boton-volver" onClick={VolverA}><IoMdReturnLeft /></button>
         </div>
         <div className="img-contacto-contenedor">
           <img className="tarjeta-contacto-img" src={'/imgs/' + contact.nombre + '.jpg'} alt="Foto contacto" />

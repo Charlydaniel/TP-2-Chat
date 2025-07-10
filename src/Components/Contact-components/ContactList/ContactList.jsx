@@ -9,7 +9,7 @@ import { RiContactsFill } from "react-icons/ri";
 
 export default function ContactList() {
 
-    const { contacts, rutaimagen, isLoadingContacts } = useContext(ContactContext)
+    const { ruta_actual,contacts, rutaimagen, isLoadingContacts } = useContext(ContactContext)
 
     if (isLoadingContacts) {
         return (
@@ -41,6 +41,7 @@ export default function ContactList() {
                                     ultima_conexion={contact.ultima_conexion}
                                     rutaimagen={rutaimagen + contact.nombre + '.jpg'}
                                     numero_telefono={contact.telefono}
+                                    ruta_actual={ruta_actual}
                                 />
                             </div>
 

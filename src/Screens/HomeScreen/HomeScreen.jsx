@@ -4,12 +4,14 @@ import { Link, useParams } from 'react-router'
 import { MessageContext } from '../../Contexts/MessageContext'
 import Spinner from '../../Components/Spinner/Spinner'
 import { useNavigate } from 'react-router'
+import { useLocation } from 'react-router';
 
 export default function HomeScreen() {
 
   const {contact_id}=useParams()
   const {loadMessages,isLoadingContacts}=useContext(MessageContext)
   const navigate = useNavigate()
+
 
   useEffect(
     ()=>{

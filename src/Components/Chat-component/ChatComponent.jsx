@@ -6,6 +6,8 @@ import { PiPhoneCallThin } from "react-icons/pi";
 import { SlOptionsVertical } from "react-icons/sl";
 import MessageComponent from "../Message-components/MessageComponent";
 import { MessageContext } from "../../Contexts/MessageContext";
+import { IoMdCloseCircle } from "react-icons/io";
+import { useLocation } from "react-router";
 
 import Swal from "sweetalert2";
 
@@ -14,7 +16,9 @@ function ChatComponent({contactId,navigate}){
 
 
     const {chatList,avisoMensajeVacio,contactoChat,rutaimagen,enviarChat}=useContext(MessageContext)
-    
+    const location = useLocation();
+
+
     const conversacion=chatList.map(
     function(message,clave){
 
@@ -49,9 +53,12 @@ const HandleAlertMessage=()=>{
 }
 
 const handleIrATarjetaContacto = () => {
-navigate(`/contacts/${contactId}/data`)
+navigate(`/contacts/${contactId}/data`, {state: { ruta_anterior: location.pathname }})
 }
 
+const handleIrAContactos = () => {
+    navigate(`/`)
+}
 
     return(
         <div className="conversation-contenedor">
@@ -64,12 +71,13 @@ navigate(`/contacts/${contactId}/data`)
                     <h3 className="nombre-contacto">
                         {contactoChat}
                     </h3>
-                    <button onClick={handleIrATarjetaContacto}>+</button>
+                    <button className="boton-detalles-contacto" onClick={handleIrATarjetaContacto}>+ detalles del contacto</button>
                 </div>
                 <div className="head-iconos nombre-contacto">
                         <div className="contenedor-icono-video">< BiVideo /></div>
                         <div className="contenedor-icono-llamado"><PiPhoneCallThin /></div>
                         <div className="contenedor-icono-opciones"><SlOptionsVertical /></div>
+                        <div className="contenedor-icono-opciones" onClick={handleIrAContactos}><IoMdCloseCircle /></div>
                 </div>
             </aside>
         </header>
