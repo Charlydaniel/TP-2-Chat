@@ -2,13 +2,15 @@ import React from 'react'
 import './ContactItem.css'
 import { useNavigate } from 'react-router'
 import { PiWhatsappLogoDuotone } from "react-icons/pi";
+import { FiPhoneCall } from "react-icons/fi";
+import { MdVideoCall } from "react-icons/md";
 
 
 
 
-export default function ContactItem({id,rutaimagen,nombre,ultima_conexion}){
+export default function ContactItem({numero_telefono,id,rutaimagen,nombre,ultima_conexion}){
 
-const mensaje_ultima_actualizacion='Ultimo contacto:'
+const mensaje_ultima_actualizacion='Ultima conexion:'
 const navigate=useNavigate()
 
 const handleIrAChat = () => {
@@ -26,11 +28,16 @@ const handleIrAChat = () => {
                 </aside>
                 <aside className='tarjeta-contacto-derecha'>
                     <div className='tarjeta-contacto-contenedor-detalles'>
-                    <div className='tarjeta-contacto-conexion-contenedor'>
-                        <span>{mensaje_ultima_actualizacion + ' ' +ultima_conexion}</span>
+                        <div className='tarjeta-contacto-datos-contenedor'>
+                            <span className='tarjeta-contacto-telefono'>{numero_telefono}</span>
+                            <span>{mensaje_ultima_actualizacion + ' ' +ultima_conexion}</span>
                         </div>
                         <div className='botonIrAMensajes-contenedor'>
-                            <button className='botonIrAMensajes' onClick={handleIrAChat}><PiWhatsappLogoDuotone /></button>
+                            <div className='tarjeta-contactos-botonera'>
+                                <button className='botonIrAMensajes' onClick={handleIrAChat}><PiWhatsappLogoDuotone /></button>
+                                <button className='boton_llamar' onClick={handleIrAChat}><FiPhoneCall /></button>
+                                <button className='boton_video_llamar' onClick={handleIrAChat}><MdVideoCall /></button>
+                            </div>
                         </div>        
                     </div>
                 </aside>

@@ -83,7 +83,9 @@ export default function ContactData(){
 
     <div className="tarjeta-contacto-contenedor">
       <header  className="header-contacto-contenedor">
-        <button className="tarjeta-contacto-boton-volver" onClick={VolverAChat}><IoMdReturnLeft /></button>
+        <div className="contonedor-boton-volver">
+          <button className="tarjeta-contacto-boton-volver" onClick={VolverAChat}><IoMdReturnLeft /></button>
+        </div>
         <div className="img-contacto-contenedor">
           <img className="tarjeta-contacto-img" src={'/imgs/' + contact.nombre + '.jpg'} alt="Foto contacto" />
         </div>

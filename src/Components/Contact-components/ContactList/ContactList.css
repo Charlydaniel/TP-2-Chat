@@ -5,7 +5,19 @@
     margin: 0;
     box-sizing: border-box;
 }
+.tarjeta-contacto-datos-contenedor{
+    display: flex;
+    flex-direction: column;
+    color: rgb(146, 144, 144);
+    gap: 10px;
 
+}
+.tarjeta-contacto-telefono{
+    display: flex;
+    font-size: 20px;
+    text-align: start;
+    color: white;
+}
 .lista-contactos-titulo{
     display: flex;
     flex-direction: row;
@@ -34,11 +46,18 @@
     left: 0;
     box-shadow: 2px 2px 5px white;
 }
-@media (max-width: 500px) {
+@media (max-width: 650px) {
+    .tarjeta-contacto-datos-contenedor{
+        display: none;
+    }
+}
+@media (max-width: 550px) {
+    
     .header-lista-contactos{
         height: auto;
         justify-content: center;
     }
+
     .icono-contacto{
         display: none;
     }

@@ -53,7 +53,6 @@
 .tarjeta-contacto-nombre{
     font-family: monospace;
     font-size: 35px;
-    width: 100%;
     text-align: start;
     align-items: start;
     color: #FFFFFF;
@@ -65,17 +64,25 @@
     justify-content: center;
     padding: 20px;
 }
-.botonIrAMensajes{
-    height: 100%;
-    color: #25D366;
+.botonIrAMensajes, .boton_llamar, .boton_video_llamar{
     border: none;
     outline: none;
     background: none;
     box-shadow: none;
-    padding: 0;
-    margin: 0;
-    font-size: 34px;
+    font-size: 25px;
+    color: white;
+    background-color: rgb(92, 92, 204);
+    border-radius: 50px;
+    width: 50px;
+    height: 50px;
+    text-align: center;
 }
+.tarjeta-contactos-botonera{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
 .tarjeta-contacto-conexion-contenedor{
     display: flex;
     flex-direction: row;
@@ -98,7 +105,6 @@
     display: flex;
     flex-direction: column;
     align-content: center;
-    width: 30%;
 }
 .tarjeta-contacto-contenedor-detalles{
     display: flex;
@@ -129,11 +135,31 @@
 }
 
 }
+@media (max-width: 320px){
+  .botonIrAMensajes, .boton_llamar, .boton_video_llamar{ 
+    width: 45px;
+    height: 45px;
+  } 
+  .tarjeta-contactos-botonera{
+    gap: 5px;
+  }
+}
 @media (max-width: 279px) {
 
     span{
         text-align: center;
     }
-
+    
 }
 
+@media (max-width: 1000px) {
+
+.tarjeta-contacto-izquierda{
+    flex:1;
+}
+.tarjeta-contacto-derecha{
+    flex:2;
+}
+
+
+}

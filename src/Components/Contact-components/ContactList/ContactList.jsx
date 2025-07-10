@@ -40,6 +40,7 @@ export default function ContactList() {
                                     nombre={contact.nombre}
                                     ultima_conexion={contact.ultima_conexion}
                                     rutaimagen={rutaimagen + contact.nombre + '.jpg'}
+                                    numero_telefono={contact.telefono}
                                 />
                             </div>
 
