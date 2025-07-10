@@ -13,7 +13,6 @@
     --headerHeight:70px;
 }
 
-
 .contenedor-icono-video .contenedor-icono-llamado{
     display: flex;
     font-size: 50px;
@@ -127,15 +126,20 @@
 }
 
 @media (max-width: 400px) {
-    .contenedor-imagen-contacto{
+/*     .contenedor-imagen-contacto{
         display: none;
-    }
+    } */
     .contenedor-header-derecha{
         padding: 0;
     }
+    .head-iconos{
+        gap: 10px;
+    }
+    
 }
 @media (max-width: 200px) {
     .head-iconos{
         gap: 0;
+    
     }
 }

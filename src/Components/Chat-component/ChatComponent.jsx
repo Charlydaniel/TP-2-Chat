@@ -8,7 +8,6 @@ import MessageComponent from "../Message-components/MessageComponent";
 import { MessageContext } from "../../Contexts/MessageContext";
 import { IoMdCloseCircle } from "react-icons/io";
 import { useLocation } from "react-router";
-
 import Swal from "sweetalert2";
 
 
@@ -64,14 +63,13 @@ const handleIrAContactos = () => {
         <div className="conversation-contenedor">
         <header className="header-contacto">
             <aside className="contenedor-imagen-contacto">
-                <img className="imagen-contacto" src={rutaimagen} />
+                <img onClick={handleIrATarjetaContacto} className="imagen-contacto" src={rutaimagen} />
             </aside>
             <aside className="contenedor-header-derecha">
                 <div >
                     <h3 className="nombre-contacto">
                         {contactoChat}
                     </h3>
-                    <button className="boton-detalles-contacto" onClick={handleIrATarjetaContacto}>+ detalles del contacto</button>
                 </div>
                 <div className="head-iconos nombre-contacto">
                         <div className="contenedor-icono-video">< BiVideo /></div>
@@ -88,8 +86,8 @@ const handleIrAContactos = () => {
                 </div>
                 <form onSubmit={HandleSubmitNewMessage} className="form-enviar-mensaje" action="submit" name="formenvio" id="formenvio">
                     <div className="enviar-mensaje-espacio">
-                        <textarea required className="input-enviar-mensaje"  placeholder="Mensaje" name="inputenvio" id="inputenvio">
-                        </textarea>
+                         <textarea required className="input-enviar-mensaje"  placeholder="Mensaje" name="inputenvio" id="inputenvio">
+                        </textarea> 
                         <button  onClick={HandleAlertMessage} type="submit" className="boton-chat-enviar"><IoSend /></button>
                     </div>
                 </form>
