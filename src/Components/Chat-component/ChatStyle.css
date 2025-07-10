@@ -20,6 +20,8 @@
 .contenedor-icono-opciones{
     display: flex;
     font-size: 20px;
+    align-items: center;
+    justify-content: end;
 }
 .conversation-contenedor{
     display: flex;
@@ -100,25 +102,29 @@
 .contenedor-header-derecha{
     display: flex;
     flex-direction: row;
-    width: 100%;
+    flex: 3;
     justify-content: space-between;
     padding: 10px;
 }
 .head-iconos{
     display: flex;
     flex-direction: row;
+    flex: 1;
     gap: 30px;
-    width: 40%;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: end;
     font-size: 25px;
+}
+.nombre-contacto-contenedor{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 .nombre-contacto{
     font-family: sans-serif;
     font-weight: 100;
     font-style: normal;
     padding-top: 10px;
-
 }  
 .boton-detalles-contacto{
  background: none;
@@ -126,9 +132,7 @@
 }
 
 @media (max-width: 400px) {
-/*     .contenedor-imagen-contacto{
-        display: none;
-    } */
+
     .contenedor-header-derecha{
         padding: 0;
     }
@@ -137,9 +141,9 @@
     }
     
 }
-@media (max-width: 200px) {
-    .head-iconos{
-        gap: 0;
-    
+@media (max-width: 250px) {
+
+    .contenedor-imagen-contacto{
+        display: none;
     }
 }

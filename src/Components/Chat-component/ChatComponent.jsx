@@ -6,7 +6,7 @@ import { PiPhoneCallThin } from "react-icons/pi";
 import { SlOptionsVertical } from "react-icons/sl";
 import MessageComponent from "../Message-components/MessageComponent";
 import { MessageContext } from "../../Contexts/MessageContext";
-import { IoMdCloseCircle } from "react-icons/io";
+import { IoArrowBackOutline } from "react-icons/io5";
 import { useLocation } from "react-router";
 import Swal from "sweetalert2";
 
@@ -62,11 +62,12 @@ const handleIrAContactos = () => {
     return(
         <div className="conversation-contenedor">
         <header className="header-contacto">
+            <div className="contenedor-icono-opciones" onClick={handleIrAContactos}><IoArrowBackOutline /></div>
             <aside className="contenedor-imagen-contacto">
                 <img onClick={handleIrATarjetaContacto} className="imagen-contacto" src={rutaimagen} />
             </aside>
             <aside className="contenedor-header-derecha">
-                <div >
+                <div className="nombre-contacto-contenedor">
                     <h3 className="nombre-contacto">
                         {contactoChat}
                     </h3>
@@ -75,7 +76,6 @@ const handleIrAContactos = () => {
                         <div className="contenedor-icono-video">< BiVideo /></div>
                         <div className="contenedor-icono-llamado"><PiPhoneCallThin /></div>
                         <div className="contenedor-icono-opciones"><SlOptionsVertical /></div>
-                        <div className="contenedor-icono-opciones" onClick={handleIrAContactos}><IoMdCloseCircle /></div>
                 </div>
             </aside>
         </header>
@@ -86,7 +86,7 @@ const handleIrAContactos = () => {
                 </div>
                 <form onSubmit={HandleSubmitNewMessage} className="form-enviar-mensaje" action="submit" name="formenvio" id="formenvio">
                     <div className="enviar-mensaje-espacio">
-                         <textarea required className="input-enviar-mensaje"  placeholder="Mensaje" name="inputenvio" id="inputenvio">
+                        <textarea required className="input-enviar-mensaje"  placeholder="Mensaje" name="inputenvio" id="inputenvio">
                         </textarea> 
                         <button  onClick={HandleAlertMessage} type="submit" className="boton-chat-enviar"><IoSend /></button>
                     </div>
