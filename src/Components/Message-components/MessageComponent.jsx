@@ -1,6 +1,8 @@
 import React, { useContext } from "react";
 import { MessageContext } from "../../Contexts/MessageContext";
 import './MessageStyle.css'
+import { MdDelete } from "react-icons/md";
+
 
 function MessageComponent({emisor,id,hora,texto}){
     
@@ -19,7 +21,7 @@ function MessageComponent({emisor,id,hora,texto}){
             <div className= {DinamicClassNameContainer}>
                 <div className={DinamicClassNameGlobe}>
                     <div className="contenedor-eleiminar-chat">
-                        <button onClick={()=>{eliminarChat(id)}} className="boton-eliminar-chat">X</button>
+                        <button onClick={()=>{eliminarChat(id)}} className="boton-eliminar-chat"><MdDelete /></button>
                     </div>
                     <div className="span-chat">
                         <span>{texto}</span>
