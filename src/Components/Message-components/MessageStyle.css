@@ -48,9 +48,10 @@
     justify-content: flex-end;
     font-style: normal;
     font-weight: lighter;
+    padding-top: 3px;
+    font-size: 10px;
 }
 .span-chat{
-    padding: 10px;
     font-size: 15px;
 }
 
