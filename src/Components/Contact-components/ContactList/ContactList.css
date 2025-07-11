@@ -32,6 +32,7 @@
     flex-direction: column;
     background-color:  #1E1E1E;
     gap: 10px;
+        min-height: 100vh;
 }
 
 .header-lista-contactos{
